@@ -1,4 +1,20 @@
-input {
-	width:500px;
-	height:20px;
+div#items{
+	background-color:#F52C2C;
+	text-align: center;
+	font-family: "Comic Sans MS"
 }
+
+div#buy{
+	background-color:#33BDBA;
+	text-align: center; 
+	font-family: "Comic Sans MS"
+}
+
+}
+#button{
+	height:100px;
+}
+#button:hover{
+	height:150px;
+}
+
