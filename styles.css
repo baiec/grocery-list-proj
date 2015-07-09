@@ -2,12 +2,14 @@ div#items{
 	background-color:#F52C2C;
 	text-align: center;
 	font-family: "Comic Sans MS"
+	float:left;
 }
 
 div#buy{
 	background-color:#33BDBA;
 	text-align: center; 
 	font-family: "Comic Sans MS"
+	float:right;
 }
 
 }
@@ -17,4 +19,6 @@ div#buy{
 #button:hover{
 	height:150px;
 }
-
+ul{
+	list-style-type: none;
+}
