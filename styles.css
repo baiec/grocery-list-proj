@@ -1,15 +1,18 @@
 div#items{
 	background-color:#F52C2C;
 	text-align: center;
-	font-family: "Comic Sans MS"
+	font-family: "Comic Sans MS";
 	float:left;
+	width:50%;
 }
 
 div#buy{
 	background-color:#33BDBA;
 	text-align: center; 
-	font-family: "Comic Sans MS"
-	float:right;
+	font-family: "Comic Sans MS";
+	float:right; 
+	width:50%;
+
 }
 
 }
