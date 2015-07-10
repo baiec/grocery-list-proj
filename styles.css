@@ -1,0 +1,33 @@
+body {
+	font-family: "Comic Sans MS";
+}
+
+div#items{
+	background-color:#F52C2C;
+	text-align: center;
+	float:left;
+	width:50%;
+	height:2000px;
+}
+
+div#buy{
+	background-color:#33BDBA;
+	text-align: center; 
+	float:right;
+	width:50%;
+	height:2000px;
+}
+
+}
+#submit{
+	height:100px;
+}
+
+#inputList {
+	border:3px solid #1CCEE6;
+
+}
+
+ul{
+	list-style-type: none;
+}
