@@ -1,13 +1,12 @@
 //This function takes the textarea value, puts it in an array,
 //clears the textarea, then adds a new <p>,
 //and puts the textarea value on the page as clickable text.
-var toBuy = [];
 var undo = [];
+var i = 0;
 $("#submit").click(function(){
 	var item = $("#inputList").val();
 	$("#inputList").val("");
 	$("#list").append("<li class='hi'>"+item+"</li>");
-	toBuy.push(item);
 });
 
 $(document).on('click','.hi',function(){
@@ -15,13 +14,14 @@ $(document).on('click','.hi',function(){
 });
 	
 $(document).on('click','.buy',function(){
-	undo[0] = $(this).val();
-	alert("hi");
+	undo.push(this);
 	$(this).remove();
 });
 
 $("#undo").click(function(){
-	$("#toBuy").append("<li class='buy'>"+undo+"</li>");
+	i = undo.length;
+	$("#toBuy").append(undo[i-1]);
+	undo.splice(i-1,1);
 });
 
 
