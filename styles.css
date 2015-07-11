@@ -2,6 +2,11 @@ body {
 	font-family: "Comic Sans MS";
 }
 
+#toggleNoise {
+	width:100px;
+	margin: 0 auto;
+}
+
 div#items{
 	background-color:#F52C2C;
 	text-align: center;

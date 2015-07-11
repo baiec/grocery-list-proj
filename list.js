@@ -11,10 +11,12 @@ $("#submit").click(function(){
 
 $(document).on('click','.hi',function(){
 	$("#toBuy").append($(this).clone().removeClass("hi").addClass("buy").appendTo("#buy"));
+	document.getElementById("sparkle").play();
 });
 	
 $(document).on('click','.buy',function(){
 	undo.push(this);
+	document.getElementById("no").play();
 	$(this).remove();
 });
 
@@ -25,15 +27,16 @@ $("#undo").click(function(){
 });
 
 
-/*
-$(".hi").hover(function(){
-	$(".hi").animate({
-		color:'orange',
-		height:'+=5px',
-		width:'+=5px'
+$(document).on('mouseover','.hi',function(){
+	$(this).animate({
+		opacity: 2
+	});
+	$(document).on('mouseout',this,function(){
+		$(this).animate({
+
+		});
 	});
 });
-*/
 
 
 
