@@ -2,11 +2,33 @@ body {
 	font-family: "Comic Sans MS";
 }
 
-#toggleNoise {
-	width:100px;
-	margin: 0 auto;
+h1 {
+	text-decoration:underline;
 }
 
+#noiseDiv {
+	/*position:absolute;
+	top: 50%;
+	left: 50%;
+	width:30em;
+	height:18em;
+	margin-top: -9em;
+	margin-left: -15em; */
+
+
+}
+
+#toggleNoise {
+	text-align:center;
+	width:100px;
+	margin:0px auto;
+}
+
+div#instructions1 {
+	float:left;
+	width:50%;
+	background-color:orange;
+}
 div#items{
 	background-color:#F52C2C;
 	text-align: center;
@@ -15,6 +37,11 @@ div#items{
 	height:2000px;
 }
 
+div#instructions2 {
+	background-color:purple;
+	float:right;
+	width:50%;
+}
 div#buy{
 	background-color:#33BDBA;
 	text-align: center; 

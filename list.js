@@ -3,6 +3,25 @@
 //and puts the textarea value on the page as clickable text.
 var undo = [];
 var i = 0;
+var noise = true;
+
+$(document).ready(function(){
+	$("#noiseoff").hide();
+});
+
+$("#toggleNoise").click(function(){
+	if(noise===true){
+		noise = false;
+		$("#noiseon").hide();
+		$("#noiseoff").show();
+	}
+	else {
+		noise = true;
+		$("#noiseoff").hide();
+		$("#noiseon").show();
+	}
+});
+
 $("#submit").click(function(){
 	var item = $("#inputList").val();
 	$("#inputList").val("");
@@ -11,12 +30,16 @@ $("#submit").click(function(){
 
 $(document).on('click','.hi',function(){
 	$("#toBuy").append($(this).clone().removeClass("hi").addClass("buy").appendTo("#buy"));
-	document.getElementById("sparkle").play();
+	if(noise===true){
+		document.getElementById("sparkle").play();
+	}
 });
 	
 $(document).on('click','.buy',function(){
 	undo.push(this);
-	document.getElementById("no").play();
+	if(noise===true){
+		document.getElementById("no").play();
+	}
 	$(this).remove();
 });
 
