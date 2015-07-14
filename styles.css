@@ -6,6 +6,12 @@ h1 {
 	text-decoration:underline;
 }
 
+.delete {
+	width:20px;
+	height:20px;
+	margin:0 10px;
+}
+
 .noisestate {
 	color:white;
 	font-weight:bold;
@@ -16,7 +22,7 @@ h1 {
 	position:absolute;
 	height:200px;
 	width:300px;
-	margin: -230px 0 0 -150px;
+	margin: -300px 0 0 -150px;
 	z-index:1;
 	top:50%;
 	left:50%;

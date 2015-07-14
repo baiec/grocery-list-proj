@@ -4,6 +4,7 @@
 var undo = [];
 var i = 0;
 var noise = true;
+var toolTips = false;
 
 $(document).ready(function(){
 	$("#noiseoff").hide();
@@ -25,7 +26,8 @@ $("#toggleNoise").click(function(){
 $("#submit").click(function(){
 	var item = $("#inputList").val();
 	$("#inputList").val("");
-	$("#list").append("<li class='hi'>"+item+"</li>");
+	$("#list").append("<li class='hi'><img src='http://www.clipartbest.com/cliparts/jcx/EyA/jcxEyAqMi.png' class='delete'>"+item+"</li>");
+	$(".delete").hide();
 });
 
 $(document).on('click','.hi',function(){
@@ -49,17 +51,17 @@ $("#undo").click(function(){
 	undo.splice(i-1,1);
 });
 
+//tooltips
 
+var timer;
 $(document).on('mouseover','.hi',function(){
-	$(this).animate({
-		opacity: 2
-	});
-	$(document).on('mouseout',this,function(){
-		$(this).animate({
-
-		});
-	});
+	timer = setTimeout(function(){
+		$(".delete").show();
+	},1000);
+}, function(){
+	clearTimeout(timer);
 });
+
 
 
 
