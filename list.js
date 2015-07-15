@@ -26,15 +26,7 @@ $("#toggleNoise").click(function(){
 $("#submit").click(function(){
 	var item = $("#inputList").val();
 	$("#inputList").val("");
-	$("#list").append("<li class='hi'><img src='http://www.clipartbest.com/cliparts/jcx/EyA/jcxEyAqMi.png' class='delete'>"+item+"</li>");
-	$(".delete").hide();
-});
-
-$(document).on('click','.hi',function(){
-	$("#toBuy").append($(this).clone().removeClass("hi").addClass("buy").appendTo("#buy"));
-	if(noise===true){
-		document.getElementById("sparkle").play();
-	}
+	$("#list").prepend("<li class='hi'>"+item+"</li>");
 });
 	
 $(document).on('click','.buy',function(){
@@ -47,20 +39,35 @@ $(document).on('click','.buy',function(){
 
 $("#undo").click(function(){
 	i = undo.length;
-	$("#toBuy").append(undo[i-1]);
+	$("#toBuy").prepend(undo[i-1]);
 	undo.splice(i-1,1);
 });
 
-//tooltips
-
-var timer;
-$(document).on('mouseover','.hi',function(){
-	timer = setTimeout(function(){
-		$(".delete").show();
-	},1000);
-}, function(){
-	clearTimeout(timer);
+//delete mode
+var deletemode = false;
+$("#removeMode").click(function(){
+	if(deletemode===false){
+		deletemode = true;
+		$("#items").css("background-color","orange");
+	}
+	else {
+		deletemode=false;
+		$("#items").css("background-color","#F52C2C");
+	}
 });
+$(document).on('click','.hi',function(){
+	if(deletemode===true){
+		$(this).remove();
+	}
+	else {
+		var test = $(this).clone();
+		$("#toBuy").prepend(test.removeClass("hi").addClass("buy").prependTo("#buy"));
+		if(noise===true){
+			document.getElementById("sparkle").play();
+		}
+	}
+});
+
 
 
 
