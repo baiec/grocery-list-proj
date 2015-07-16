@@ -3,22 +3,56 @@ body {
 	height:100%;
 }
 
+#undo {
+	-webkit-border-radius:10px;
+	-moz-border-radius:10px;
+	border-radius:10px;
+}
+
+#toolTips {
+	z-index:2;
+	position:absolute;
+	font-weight:bold;
+	margin: 500px 0 0 550px;
+	text-align:center;
+	background-color:#FF3BE3;
+	-webkit-border-radius:10px;
+	-moz-border-radius:10px;
+	border-radius:10px;
+}
+
+#helpMode {
+	width:40px;
+	height:40px;
+	z-index:1;
+	float:right;
+	position:absolute;
+	padding-left:46.5%;
+}
+
+#helpMode:hover {
+	width:45px;
+	height:45px;
+}
+
 #inputList {
 	border:3px solid #1CCEE6;
 	padding:5px;
 	resize:none;
 	width:300px;
-	text-decoration:underline;
 	font-family: "Comic Sans MS";
 	font-size:10px;
-	-webkit-border-radius:5px;
-	-moz-border-radius:5px;
-	border-radius:5px;
+	-webkit-border-radius:10px;
+	-moz-border-radius:10px;
+	border-radius:10px;
 }
 
 #submit {
 	position:relative;
 	bottom:16px;
+	-webkit-border-radius:10px;
+	-moz-border-radius:10px;
+	border-radius:10px;
 }
 
 h1 {
@@ -93,13 +127,11 @@ div#instructions2 {
 
 div#buy{
 	background-color:#33BDBA;
-	text-align: center; 
+	text-align:center; 
 	float:right;
 	width:50%;
 	height:12000px;
 	z-index:-1;
-}
-
 }
 
 ul{
