@@ -156,7 +156,9 @@ $(document).on('mouseover','.hi',function(){
 });
 
 $(document).on('mouseover','.buy',function(){
-	$("#toolTips").html("These are the items you need to buy. <br>Click on them to remove them.");
+	if(helpM===true){
+		$("#toolTips").html("These are the items you need to buy. <br>Click on them to remove them.");
+	}
 	$(document).on('mouseleave','.buy',function(){
 		$("#toolTips").html("");
 	});
