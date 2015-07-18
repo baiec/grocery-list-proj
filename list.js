@@ -8,20 +8,38 @@ var noise = true;
 var toolTips = false;
 
 $(document).ready(function(){
+	$("#noNoise").hide();
+	$("#noiseState").html("Noise is on.");
+});
+
+//testing keypress
+$(function(){
+	$("#inputList").keypress(function(key){
+		if(key.which == 13){
+			var item = $("#inputList").val();
+			$("#inputList").val("");
+			$("#list").prepend("<li class='hi'>"+item+"</li>");
+		}
+	});
+});
+//end test
+
+$(document).ready(function(){
 	$("#noiseoff").hide();
 });
 
-$("#toggleNoise").click(function(){
-	if(noise===true){
-		noise = false;
-		$("#noiseon").hide();
-		$("#noiseoff").show();
-	}
-	else {
-		noise = true;
-		$("#noiseoff").hide();
-		$("#noiseon").show();
-	}
+$("#noise").click(function(){
+	noise = false;
+	$("#noiseState").html("Noise is off.");
+	$("#noise").hide();
+	$("#noNoise").show();
+});
+
+$("#noNoise").click(function(){
+	noise = true;
+	$("#noiseState").html("Noise is on.");
+	$("#noNoise").hide();
+	$("#noise").show();
 });
 
 $("#submit").click(function(){
@@ -157,7 +175,9 @@ $(document).on('mouseover','.hi',function(){
 });
 
 $(document).on('mouseover','.buy',function(){
-	$("#toolTips").html("These are the items you need to buy. <br>Click on them to remove them.");
+	if(helpM===true){
+		$("#toolTips").html("These are the items you need to buy. <br>Click on them to remove them.");
+	}
 	$(document).on('mouseleave','.buy',function(){
 		$("#toolTips").html("");
 	});

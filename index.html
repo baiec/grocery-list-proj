@@ -19,15 +19,15 @@
 		If you delete something, click undo. When you buy something, click it to remove.
 	</div>-->
 	<div id="noiseDiv">
-		<img src="images/musicbutton.png" id="toggleNoise">
-		<p class="noisestate" id="noiseon">Noise is on.</p>
-		<p class="noisestate" id="noiseoff">Noise is off.</p>
+		<img src="images/musicbutton.png" id="noise">
+		<img src="http://simpleicon.com/wp-content/uploads/volume-mute-256x256.png" id="noNoise">
+		<p id="noiseState"></p>
 	</div>
 	<!--This is button div-->
 	<img id="removeMode" src="http://www.clipartbest.com/cliparts/jcx/EyA/jcxEyAqMi.png">
 	<div id="items">
 		<h1>COMMONLY USED ITEMS</h1>
-		<textarea id="inputList" placeholder="Type what you commonly buy here." rows="2" cols="40"></textarea>
+		<input type="text" id="inputList" placeholder="Type what you commonly buy here."></input>
 		<button id="submit">Click to submit.</button>
 		<ul id="list"></ul>
 	</div>
@@ -39,9 +39,8 @@
 		<ul id="toBuy"></ul>
 	</div>
 	<!-- toolTip div-->
-	<div id="toolTips">
-		
-	</div>
+	<div id="toolTips"></div>
+
 	<script src="list.js"></script>
 </body>
 </html>
